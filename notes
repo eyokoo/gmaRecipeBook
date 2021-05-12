@@ -1,0 +1,46 @@
+heroku git:remote -a {name of app}
+git remote -v 
+git push -u heroku {branch you're pushing}
+
+git status //to check branch name//
+
+heroku logs -t //to show error message//
+
+
+///create .env file to hide your database and password information. And add .env file in your .gitignore file
+
+for example...in your connections folder where your database information
+        host: 'den1.mysql3.gear.host', 
+        user: 'eydb',
+        password: 'Bt6R!?7Bkwpv',
+        database: 'eydb'
+
+replace it with
+        host: process.env.MYSQL_HOST
+        user: process.env.MYSQL_USER
+        password: process.env.MYSQL_PW
+        database: process.env.MYSQL_DB
+
+and file it in your .env libary/file next to your .json file
+        process.env.MYSQL_HOST = den1.mysql3.gear.host
+        process.env.MYSQL_USER = eydb
+        process.env.MYSQL_PW = Bt6R!?7Bkwpv
+        process.env.MYSQL_DB = eydb
+
+also add in your connection folder...
+        require("dotenv").config("../.env")
+and then on your terminal...
+        npm install dotenv
+
+on heroku > settings > config vars on heroku to add your created variables in your app
+
+to find configs on your terminal > heroku config 
+
+
+to create package.json > npm init (and press enter multiple times)
+to create package-lock.json > npm install init -y
+        and then download all dependencies > example.  npm install nodemon body-parser axios mysql
+
+
+GearHost > hosts the database
+Heroku > hosts the application website
