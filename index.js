@@ -8,6 +8,6 @@ app.use(require("./routes/recipes")); //importing the routes module
 
 
 const PORT = process.env.PORT || 9000
-app.listen(port,() => {
-  console.log("Listening to the port", port);
+app.listen(PORT,() => {
+  console.log("Listening to the port", PORT);
 });

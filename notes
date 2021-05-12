@@ -47,3 +47,6 @@ to create package-lock.json > npm install init -y
 
 GearHost > hosts the database
 Heroku > hosts the application website
+
+
+git push origin > to push to github
