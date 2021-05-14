@@ -5,6 +5,7 @@ heroku git:remote -a {name of app}
 git remote -v 
 git push -u heroku {branch you're pushing}
 
+
 git status //to check branch name//
 
 heroku logs -t //to show error message//
@@ -50,3 +51,6 @@ Heroku > hosts the application website
 
 
 git push origin > to push to github
+
+to create table in MySQL Workbench > reference: fiddle
+        https://www.db-fiddle.com/f/8U1SS2zVjsz9VmjciqJ2Hx/0
