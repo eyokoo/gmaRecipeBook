@@ -4,6 +4,7 @@ const app = express();
 
 app.use(bodyParser.json());
 app.use(require("./routes/recipes")); //importing the routes module
+app.use(require("./auth").router)
 
 
 
