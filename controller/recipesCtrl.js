@@ -81,12 +81,12 @@ let addRecipe = (req, res) => {
   let sql = `INSERT INTO recipes (recipe_name, recipe_instructions) VALUES (?, ?);`
   let params = [newName, newInstr];
 
-    connection.query(sql, params, (error) => {
+    connection.query(sql, params, (error, results) => {
       if (error) {
         console.error("Failed to insert new recipe in the database", error);
         res.sendStatus(500);
       } else {
-        res.send("Success - You created a new recipe!");
+        res.send(results);
       }
     })
 }

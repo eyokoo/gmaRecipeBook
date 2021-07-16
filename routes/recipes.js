@@ -13,6 +13,8 @@ router.get("/recipes/:id", [checkJwt], controller.recipeById);// GET returns the
 router.put("/recipes/:id",[checkJwt, isAdmin], controller.editRecipe);//PUT should call the editRecipe function, and update the recipe in my database
 
 router.post("/recipes", [checkJwt, isAdmin],controller.addRecipe);//POST should call the addRecipe function, and add a recipe to my databse
+// router.post("/ingredients", [checkJwt, isAdmin],controller.addIngredients);
+// figure out how to add many ingredients at once
 
 router.delete("/recipes/:id", [checkJwt, isAdmin], controller.deleteRecipe);// DELETE should call the deleteRecipe function, and delete the recipe from my database
 
