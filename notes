@@ -3,7 +3,7 @@ make sure to create repo on github first
 
 heroku git:remote -a {name of app}
 git remote -v 
-
+git push -u heroku {branch you're pushing}
 
 
 git status //to check branch name//
