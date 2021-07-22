@@ -1,7 +1,10 @@
 const express = require("express");
 const bodyParser = require("body-parser"); //by default this app should be assuming request body data as json
 const app = express();
+const cors = require ('cors');
 
+
+app.use(cors());
 app.use(bodyParser.json());
 app.use(require("./routes/recipes")); //importing the routes module
 app.use(require("./auth").router)
